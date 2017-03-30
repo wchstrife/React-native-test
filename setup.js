@@ -5,26 +5,13 @@ import {
     Text,
     View
 } from 'react-native';
-import HelloComponent, { sum } from './HelloComponent';
+import StateTest, { sum } from './StateTest';
 export default class setup extends Component {
-    constructor(props) {
-        super(props);
-        this.state = ({
-            result: ''
-        })
-    }
+   
     render() {
         return ( 
             <View style = { styles.container }>
-                <Text style = {{ fontSize: 20 } }
-            onPress = {() => {
-                    var result = sum(2, 3);
-                    this.setState({
-                        result: result,
-                    })
-                }
-            } 
-            >2 + 3 = { this.state.result } </Text> 
+                <StateTest/>
             </View>
         );
     }
