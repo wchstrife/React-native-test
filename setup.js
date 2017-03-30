@@ -5,13 +5,14 @@ import {
     Text,
     View
 } from 'react-native';
-import StateTest, { sum } from './StateTest';
+import StateTest from  './StateTest';
+
 export default class setup extends Component {
    
     render() {
         return ( 
             <View style = { styles.container }>
-                <StateTest/>
+                <StateTest text = 'hahaha'/>
             </View>
         );
     }

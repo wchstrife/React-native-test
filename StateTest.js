@@ -10,11 +10,17 @@ export default class StateTest extends Component {
     constructor(props){
         super(props);
         this.state={
-            size:80,
-        }
+            showText: true
+        };
+
+        setInterval(() => {
+            this.setState({ showText: !this.state.showText});
+        }, 1000);
     }
+
     render() {
-        return <Text style = {{fontSize: 30, backgroundColor: 'red' }}> Hello </Text>
+        let dispaly = this.state.showText ? this.props.text : '';
+        return (
+            <Text style = {{fontSize: 30, backgroundColor: 'red' }}>  {dispaly} </Text>);
     }
 }
-
